@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifestation Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Manifestation Fact</h1>
+        <p id="fact"></p>
+        <button id="nextFact">Next Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Manifestation is the process of bringing thoughts, desires, or intentions into reality through focused intention and belief.",
+            "Manifestation is often associated with the Law of Attraction, which states that like attracts like; positive thoughts attract positive outcomes.",
+            "Many manifestation techniques involve visualization, where individuals imagine their desired outcomes in vivid detail.",
+            "Positive affirmations are commonly used in manifestation practices to reinforce beliefs and intentions.",
+            "A positive mindset is crucial for successful manifestation, as negative thoughts can hinder the process.",
+            "Practicing gratitude can enhance manifestation by shifting focus from lack to abundance.",
+            "Manifestation techniques often aim to reprogram the subconscious mind to align with one's desires.",
+            "Meditation is frequently used in manifestation practices to clear the mind and focus on intentions.",
+            "While thoughts and beliefs are important, taking inspired action towards goals is also a key component of manifestation.",
+            "Everything is energy, and manifestation is about aligning your energy with the energy of your desires.",
+            "Many people use manifestation journals to write down their goals and visualize their achievements.",
+            "Scripting involves writing a detailed narrative of your life as if your desires have already manifested.",
+            "Creating a vision board with images and words that represent your goals can help keep your intentions in focus.",
+            "Letting go of attachment to the outcome can help reduce anxiety and allow for better manifestation.",
+            "Manifestation may not happen instantly; it often requires patience and trust in the process.",
+            "Joining a community or group focused on manifestation can provide support and motivation.",
+            "Listening to your intuition can guide you in making decisions that align with your manifestation goals.",
+            "Identifying and overcoming self-limiting beliefs is essential for successful manifestation.",
+            "Regular practice of manifestation techniques can lead to more consistent results.",
+            "Manifestation emphasizes personal responsibility, encouraging individuals to take charge of their thoughts and actions to create their desired reality."
+        ];
+
+        let currentFactIndex = 0;
+
+        function displayFact() {
+            const factElement = document.getElementById('fact');
+            factElement.textContent = facts[currentFactIndex];
+        }
+
+        document.getElementById('nextFact').addEventListener('click', () => {
+            currentFactIndex = (currentFactIndex + 1) % facts.length;
+            displayFact();
+        });
+
+        // Display the first fact on page load
+        displayFact();
+    </script>
+</body>
+</html>
